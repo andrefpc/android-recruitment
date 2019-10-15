@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".SplashScreenActivity">
+    tools:context=".ui.SplashScreenActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/splash_image"
@@ -18,7 +18,7 @@
         android:layout_centerInParent="true"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        style="@style/Bold14"
+        style="@style/Bold16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/recruitment_challenge"/>

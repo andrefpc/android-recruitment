@@ -1,4 +1,4 @@
-package com.example.android_recruitment
+package com.example.android_recruitment.ui
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.bumptech.glide.Glide
+import com.example.android_recruitment.R
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity() {
