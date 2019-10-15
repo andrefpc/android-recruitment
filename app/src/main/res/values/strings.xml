@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">android-recruitment</string>
     <string name="action_settings">Settings</string>
+
+
+    <string name="recruitment_challenge">Recruitment Challenge</string>
 </resources>
