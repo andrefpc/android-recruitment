@@ -27,7 +27,7 @@ class CurrencyService(val context: Context, val loading: LinearLayout) {
 
     fun getCurrencyHistory(fromCurrency: String, toCurrency: String, observable: Subject<ResultVolley>?) {
         val calendar = Calendar.getInstance()
-        calendar.add(Calendar.DAY_OF_WEEK, -10)
+        calendar.add(Calendar.MONTH, -1)
         val lastMonth = calendar.time
         val today = Date()
         val sdf = SimpleDateFormat("yyyy-MM-dd")

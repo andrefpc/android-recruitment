@@ -31,7 +31,7 @@ import java.math.RoundingMode
 class MainActivity : AppCompatActivity() {
     private val activity: AppCompatActivity = this
     private val context: Context = this
-    private var listCurrencies: List<String> = ArrayList()
+    private var listCurrencies: List<String> = arrayListOf()
     private var rates: HashMap<String, Double> = HashMap()
 
     private var selectedFrom = "BRL"
