@@ -1,6 +1,7 @@
-package com.example.android_recruitment.ui
+package com.example.android_recruitment.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android_recruitment.R
 import com.example.android_recruitment.model.generic.Rate
-import io.reactivex.subjects.Subject
-import kotlinx.android.synthetic.main.content_main.*
-import kotlinx.android.synthetic.main.row_currency.view.*
+import com.example.android_recruitment.ui.HistoryActivity
+import com.example.android_recruitment.ui.MainActivity
 import kotlinx.android.synthetic.main.row_rate.view.*
 import java.math.BigDecimal
 import java.math.RoundingMode
 
-class RatesAdapter(val context: Context, val currency: String) : RecyclerView.Adapter<RatesAdapter.MyViewHolder>() {
+class RatesAdapter(val context: Context) : RecyclerView.Adapter<RatesAdapter.MyViewHolder>() {
     var rates: MutableList<Rate> = mutableListOf()
+    var currency: String = ""
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.row_rate, parent, false)
@@ -37,9 +38,17 @@ class RatesAdapter(val context: Context, val currency: String) : RecyclerView.Ad
         holder.toValue.text = totalTo.toString().replace(".", ",")
         val urlTo = "https://raw.githubusercontent.com/transferwise/currency-flags/master/src/flags/${rate.currency.toLowerCase()}.png"
         Glide.with(context).load(urlTo).into(holder.toFlag)
+
+        holder.layout.setOnClickListener {
+            val intent = Intent(context, HistoryActivity::class.java)
+            intent.putExtra("fromCurrency", currency)
+            intent.putExtra("toCurrency", rate.currency)
+            context.startActivity(intent)
+        }
     }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val layout = view.currency_layout
         val fromFlag = view.currency_from_flag
         val fromValue = view.currency_from_value
         val toFlag = view.currency_to_flag

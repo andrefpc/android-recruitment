@@ -3,6 +3,7 @@ package com.example.android_recruitment.ui
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android_recruitment.R
+import com.example.android_recruitment.adapters.CurrencyAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
@@ -18,7 +19,10 @@ class BottomSheetCurrencies(private val activity: AppCompatActivity, val clickOb
         try {
             val sheetView = activity.layoutInflater.inflate(R.layout.bottom_sheet_currencies, null)
 
-            var adapter = CurrencyAdapter(activity.applicationContext, listClick())
+            var adapter = CurrencyAdapter(
+                activity.applicationContext,
+                listClick()
+            )
 
             val layoutManager = LinearLayoutManager(activity.applicationContext)
             sheetView.bottom_sheet_currency_list.layoutManager = layoutManager

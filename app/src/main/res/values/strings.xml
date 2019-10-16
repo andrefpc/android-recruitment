@@ -7,4 +7,5 @@
     <string name="main_from">De</string>
     <string name="main_to">Para</string>
     <string name="bottom_sheet_currency_title">Selecione uma moeda</string>
+    <string name="title_activity_history">HistoryActivity</string>
 </resources>

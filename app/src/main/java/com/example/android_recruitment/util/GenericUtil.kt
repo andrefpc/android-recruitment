@@ -13,7 +13,6 @@ class GenericUtil {
     }
 
     fun formatMoney(it: Editable, editText: AppCompatEditText) {
-        var selection = editText.selectionStart
         var str = it.toString()
         str = str.replace(",", "")
         try {
@@ -23,11 +22,7 @@ class GenericUtil {
             df.roundingMode = RoundingMode.DOWN
             val valueString = df.format(doubleValue).replace(".", ",")
             editText.setText(valueString)
-            if (selection > valueString.length) {
-                editText.setSelection(valueString.length)
-            } else {
-                editText.setSelection(selection)
-            }
+            editText.setSelection(valueString.length)
         } catch (e: NumberFormatException) {
             e.printStackTrace()
         }

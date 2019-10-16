@@ -1,4 +1,4 @@
-package com.example.android_recruitment.ui
+package com.example.android_recruitment.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

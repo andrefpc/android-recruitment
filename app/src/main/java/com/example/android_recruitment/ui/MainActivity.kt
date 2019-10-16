@@ -8,6 +8,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.android_recruitment.R
+import com.example.android_recruitment.adapters.RatesAdapter
 import com.example.android_recruitment.model.generic.Rate
 import com.example.android_recruitment.model.generic.ResultVolley
 import com.example.android_recruitment.model.response.CountryInfoReponse
@@ -22,7 +23,6 @@ import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
 
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.bottom_sheet_currencies.view.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     private var selectedFrom = "BRL"
     private var selectedTo = "USD"
 
-    private var adapter: RatesAdapter = RatesAdapter(context, selectedFrom)
+    private var adapter: RatesAdapter = RatesAdapter(context)
 
     private var updating = false
     private var totalFrom = 0
@@ -74,7 +74,8 @@ class MainActivity : AppCompatActivity() {
 
                     val rate = rates[selectedTo]
                     rate?.let {
-                        val totalTo = BigDecimal((totalFrom * rate)/100).setScale(2, RoundingMode.HALF_EVEN)
+                        val totalTo =
+                            BigDecimal((totalFrom * rate) / 100).setScale(2, RoundingMode.HALF_EVEN)
                         main_to_value.text = totalTo.toString().replace(".", ",")
                     }
                 }
@@ -96,16 +97,16 @@ class MainActivity : AppCompatActivity() {
             override fun onSubscribe(d: Disposable) {}
 
             override fun onNext(currency: String) {
-                if(type == "from") {
+                if (type == "from") {
                     selectFromCurrency(currency)
-                }else{
+                } else {
                     selectToCurrency(currency)
                 }
             }
 
             override fun onError(e: Throwable) {}
 
-            override fun onComplete()  {}
+            override fun onComplete() {}
         }
 
         observable.subscribe(observer)
@@ -114,7 +115,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun selectFromCurrency(currency: String) {
         selectedFrom = currency
-        val url = "https://raw.githubusercontent.com/transferwise/currency-flags/master/src/flags/${currency.toLowerCase()}.png"
+        val url =
+            "https://raw.githubusercontent.com/transferwise/currency-flags/master/src/flags/${currency.toLowerCase()}.png"
         Glide.with(context).load(url).into(main_from_flag)
         main_from_currecy.text = currency
         getCurrencyValuesRequest(currency)
@@ -123,7 +125,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun selectToCurrency(currency: String) {
         selectedTo = currency
-        val url = "https://raw.githubusercontent.com/transferwise/currency-flags/master/src/flags/${currency.toLowerCase()}.png"
+        val url =
+            "https://raw.githubusercontent.com/transferwise/currency-flags/master/src/flags/${currency.toLowerCase()}.png"
         Glide.with(context).load(url).into(main_to_flag)
         main_to_currecy.text = currency
         getCurrencyInfo(currency, "to")
@@ -138,10 +141,13 @@ class MainActivity : AppCompatActivity() {
             override fun onNext(result: ResultVolley) {
                 try {
                     if (result.sucess) {
-                        val currencyResponse = Gson().fromJson(result.body, CurrencyReponse::class.java)
+                        val currencyResponse =
+                            Gson().fromJson(result.body, CurrencyReponse::class.java)
                         rates = currencyResponse.rates
+                        adapter.currency = currency
+                        adapter.rates.clear()
 
-                        for (rate in rates){
+                        for (rate in rates.toSortedMap()) {
                             adapter.rates.add(Rate(rate.key, rate.value))
                         }
                         adapter.notifyDataSetChanged()
@@ -177,9 +183,9 @@ class MainActivity : AppCompatActivity() {
                         val listType = object : TypeToken<List<CountryInfoReponse>>() {}.type
                         val currencyInfoResponse =
                             Gson().fromJson<List<CountryInfoReponse>>(result.body, listType)
-                        if(type == "from") {
+                        if (type == "from") {
                             main_from_symbol.text = currencyInfoResponse[0].currencies[0].symbol
-                        }else{
+                        } else {
                             main_to_symbol.text = currencyInfoResponse[0].currencies[0].symbol
                         }
                     } else {
