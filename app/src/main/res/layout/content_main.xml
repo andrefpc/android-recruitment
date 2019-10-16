@@ -16,142 +16,180 @@
         app:cardCornerRadius="8dp"
         app:cardElevation="16dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/main_from_layout"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/main_from_flag"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="24dp" />
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:id="@+id/main_from_layout"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
 
-                        <androidx.appcompat.widget.AppCompatTextView
-                            style="@style/Regular14"
-                            android:layout_width="wrap_content"
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/main_from_flag"
+                            android:layout_width="40dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/main_from" />
+                            android:layout_marginEnd="24dp" />
 
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/main_from_currecy"
-                            style="@style/Bold18"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="BRL" />
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/Regular14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/main_from" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:layout_height="wrap_content">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/main_from_currecy"
+                                    style="@style/Bold18"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="BRL" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    app:srcCompat="@drawable/ic_drop_down_arrow"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/main_from_symbol"
+                        style="@style/Bold18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/main_from_value"
+                        style="@style/Bold18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:inputType="number"
+                        android:text="0,00" />
                 </LinearLayout>
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/main_from_symbol"
-                    style="@style/Bold18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R$" />
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/main_from_value"
-                    style="@style/Bold18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:inputType="number"
-                    android:text="0,00" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray" />
 
                 <LinearLayout
-                    android:id="@+id/main_to_layout"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/main_to_flag"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="24dp" />
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:id="@+id/main_to_layout"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
 
-                        <androidx.appcompat.widget.AppCompatTextView
-                            style="@style/Regular14"
-                            android:layout_width="wrap_content"
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/main_to_flag"
+                            android:layout_width="40dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/main_to" />
+                            android:layout_marginEnd="24dp" />
 
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/main_to_currecy"
-                            style="@style/Bold18"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="BRL" />
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/Regular14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/main_to" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:layout_height="wrap_content">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/main_to_currecy"
+                                    style="@style/Bold18"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="BRL" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    app:srcCompat="@drawable/ic_drop_down_arrow"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/main_to_symbol"
+                        style="@style/Bold18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/main_to_value"
+                        style="@style/Bold18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="0,00" />
                 </LinearLayout>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/main_to_symbol"
-                    style="@style/Bold18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R$" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/main_to_value"
-                    style="@style/Bold18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="0,00" />
             </LinearLayout>
-        </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_change_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@drawable/ic_change"
+                app:elevation="16dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_recycler_currencies"
-        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:padding="16dp" />
 
 </LinearLayout>

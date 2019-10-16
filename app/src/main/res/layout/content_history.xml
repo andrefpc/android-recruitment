@@ -1,11 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ui.HistoryActivity"
     tools:showIn="@layout/activity_history">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/history_from_flag"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:adjustViewBounds="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/history_from_currency"
+                style="@style/Bold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_exchange" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/history_to_flag"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:adjustViewBounds="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/history_to_currency"
+                style="@style/Bold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.db.williamchart.view.LineChartView
+        android:id="@+id/history_chart"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        android:paddingTop="4dp"
+        app:chart_axis="none"
+        app:chart_lineColor="@color/dark_gray"
+        app:chart_lineThickness="3dp"
+        app:chart_smoothLine="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/history_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

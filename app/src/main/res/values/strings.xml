@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">android-recruitment</string>
-    <string name="action_settings">Settings</string>
-
-
+    <string name="app_name">Sympla Challenge</string>
+    <string name="title_activity_history">Histórico</string>
+    <string name="title_activity_main">Conversor Monetário</string>
     <string name="recruitment_challenge">Recruitment Challenge</string>
     <string name="main_from">De</string>
     <string name="main_to">Para</string>
     <string name="bottom_sheet_currency_title">Selecione uma moeda</string>
-    <string name="title_activity_history">HistoryActivity</string>
+    <string name="alert_close_title">Deseja realmente fechar o app?</string>
+    <string name="alert_close_yes_button">Sim</string>
+    <string name="alert_close_no_button">Não</string>
 </resources>
