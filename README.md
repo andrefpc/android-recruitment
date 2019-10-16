@@ -1,4 +1,4 @@
-# Desafio para Recrutamento Sympla
+# Desafio técnico para Recrutamento Sympla
 
 Criado para desafiar e medir o nível de conhecimento do candidato a vaga de desenvolvedor Android na empresa Sympla, o projeto consiste em criar um projeto Android Nativo que tem como objetivo realizar a conversão de moedas.
 
