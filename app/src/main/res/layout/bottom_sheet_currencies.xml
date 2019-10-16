@@ -13,15 +13,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/Title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:text="@string/bottom_sheet_currency_title" />
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/bottom_sheet_currency_list"
                 android:layout_width="match_parent"
