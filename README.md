@@ -6,7 +6,7 @@ Criado para desafiar e medir o nível de conhecimento do candidato a vaga de des
 
 #### Splash Screen
 
-Tela reponsável pela apresentação do app que irá redicionar automaticamente para tela principal da aplicação.
+Tela reponsável pela apresentação do app que irá redirecionar automaticamente para tela principal da aplicação.
 
 <img src="/screenshoots/splash.png" height="400" />
 
@@ -20,7 +20,7 @@ Para adicionar o valor, basta o usuário digitar o valor sem precisar adicionar 
 
 Na parte superior da tela, o usuário pode alternar ambas as moedas de conversão clicando nos seus respectivos campos e irá aparecer a listagem de todas as moedas disponíveis para conversão, após selecionar alguma delas, a tela irá ser atualizada com as imagens, nomes e valores correspondentes.
 
-A clicar no botão "voltar" nativo do celular, uma alerta irá aparecer para o usuário confirmando se ele deseja sair do app.
+A clicar no botão "voltar" nativo do celular, uma alerta irá aparecer para o usuário confirmar se ele deseja sair do app.
 
 Ao clicar em algum dos itens da lista de conversão, o usuário é redirecionado para a tela de Histórico, para poder visualizar os histórico de conversão dessa moedas.
 
@@ -28,7 +28,7 @@ Ao clicar em algum dos itens da lista de conversão, o usuário é redirecionado
 
 #### History Screen
 
-Tela reponsável por exibir o histórico de valores de conversão das moedas selecionadas desde o mesmo dia do mês anterior, até hoje.
+Tela reponsável por exibir o histórico de valores de conversão das moedas selecionadas desde o mesmo dia do mês anterior até hoje.
 
 Nela é exibido um gráfico e uma listagem para visualização desse histórico.
 
