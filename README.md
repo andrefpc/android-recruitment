@@ -20,7 +20,9 @@ Para adicionar o valor, basta o usuário digitar o valor sem precisar adicionar 
 
 Na parte superior da tela, o usuário pode alternar ambas as moedas de conversão clicando nos seus respectivos campos e irá aparecer a listagem de todas as moedas disponíveis para conversão, após selecionar alguma delas, a tela irá ser atualizada com as imagens, nomes e valores correspondentes.
 
-A clicar no botão "voltar" nativo do celular, uma alerta irá aparecer para o usuário confirmar se ele deseja sair do app.
+Ao clicar no botão centralizado na parte superior da tela, o usuário alterna automaticamente as moedas atualizando as conversões.
+
+Ao clicar no botão "voltar" nativo do celular, uma alerta irá aparecer para o usuário confirmar se ele deseja sair do app.
 
 Ao clicar em algum dos itens da lista de conversão, o usuário é redirecionado para a tela de Histórico, para poder visualizar os histórico de conversão dessa moedas.
 
@@ -63,11 +65,11 @@ Os arquivos de resource estão dispostos de acordo com os padrões recomendados 
 
 Além dos recursos nativos do Android, alguns sdks externos foram utilizados para auxílio no desenvolvimento da aplicação:
 
-- <b>Glide</b> - Biblioteca usada para facilitar a exibição de imagens (via Url, gifs, etc).
-- <b>Volley</b> - Biblioteca usada para facilitar as chamadas HTTP da aplicação.
-- <b>ReactiveX</b> - Biblioteca utilizada para desenvolvimento reativo na aplicação.
-- <b>Gson</b> - Biblioteca utilizada para falicitar o parser de Jsons em objetos.
-- <b>WilliamChart</b> - Biblioteca utilizada para geração de gráficos na aplicação.
+- <b>Glide</b> : Biblioteca usada para facilitar a exibição de imagens (via Url, gifs, etc).
+- <b>Volley</b> : Biblioteca usada para facilitar as chamadas HTTP da aplicação.
+- <b>ReactiveX</b> : Biblioteca utilizada para desenvolvimento reativo na aplicação.
+- <b>Gson</b> : Biblioteca utilizada para falicitar o parser de Jsons em objetos.
+- <b>WilliamChart</b> : Biblioteca utilizada para geração de gráficos na aplicação.
 
 ## Apis Utlizadas
 
@@ -77,6 +79,15 @@ Foram utlizadas duas apis na aplicação para recuperar dados relativos a conver
   - https://exchangeratesapi.io/
 - <b>Rest Countries API</b> - Api utilizada para recuperar os simbolos das moedas disponíveis no app
   - https://restcountries.eu/
+  
+## Testes Utilizados
+
+Além de testar o app por contra própria e testar com amigos, criei um Teste de Instrumentação automatizado simples, nomeado por MainScreenTest, para testar alguns fluxos do app:
+
+- <b>changeFromCurrency</b> : Testa se a funcionalidade de trocar a moeda de origem está funcionando como esperado.
+- <b>changeToCurrency</b> : Testa se a funcionalidade de trocar a moeda de destino está funcionando como esperado. 
+- <b>openHistory</b> : Testa se ao clicar em um item da lista de conversão, o usuário é redirecionado para a tela de histórico de conversão.
+- <b>changeButton</b> : Testa se o botão de trocar as moedas simultâneamente está funcionando com o esperado. 
 
 ## Versionamento
 
