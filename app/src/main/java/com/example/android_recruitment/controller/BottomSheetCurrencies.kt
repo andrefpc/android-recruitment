@@ -1,4 +1,4 @@
-package com.example.android_recruitment.ui
+package com.example.android_recruitment.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager

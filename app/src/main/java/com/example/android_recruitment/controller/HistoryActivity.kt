@@ -1,4 +1,4 @@
-package com.example.android_recruitment.ui
+package com.example.android_recruitment.controller
 
 import android.content.Context
 import android.graphics.Color

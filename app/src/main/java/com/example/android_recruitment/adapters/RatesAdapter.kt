@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android_recruitment.R
 import com.example.android_recruitment.model.generic.Rate
-import com.example.android_recruitment.ui.HistoryActivity
-import com.example.android_recruitment.ui.MainActivity
+import com.example.android_recruitment.controller.HistoryActivity
 import kotlinx.android.synthetic.main.row_rate.view.*
 import java.math.BigDecimal
 import java.math.RoundingMode
