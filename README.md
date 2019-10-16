@@ -1,4 +1,4 @@
-# Desafio para Recrutamento Sympla
+# Desafio técnico para Recrutamento Sympla
 
 Criado para desafiar e medir o nível de conhecimento do candidato a vaga de desenvolvedor Android na empresa Sympla, o projeto consiste em criar um projeto Android Nativo que tem como objetivo realizar a conversão de moedas.
 
@@ -36,11 +36,11 @@ Nela é exibido um gráfico e uma listagem para visualização desse histórico.
 
 <img src="/screenshoots/history.png" height="400" /> 
 
-## Linguagem Utilizada
+## Linguagem
 
 Mesmo tendo domínio maior sobre a linguagem Java, optei por utilizar a linguagem Kotlin para desenvolvimento do projeto, pois como o objetivo é me desafiar, nada melhor do que sair da minha zona de conforto e utilizar um linguagem mais nova e que está em crescente no mercado.
 
-## Arquitetura Utilizada
+## Arquitetura
 
 Foi utilizada a arquitetura MVC no projeto, entretanto, a estrutura de pastas utilizada tem uma certa identidade da minha parte, pois eu tento ao máximo separar as classes em pacotes que correspondem as suas especificidades.
 
@@ -61,7 +61,7 @@ Os arquivos de resource estão dispostos de acordo com os padrões recomendados 
 - <b>raw</b> : Onde está o gif utilizado na SplashScreen
 - <b>values</b> : Onde estão os arquivos de cores, dimensões, textos e estilos da aplicação
 
-## Sdks Utlizados
+## Sdks
 
 Além dos recursos nativos do Android, alguns sdks externos foram utilizados para auxílio no desenvolvimento da aplicação:
 
@@ -71,7 +71,7 @@ Além dos recursos nativos do Android, alguns sdks externos foram utilizados par
 - <b>Gson</b> : Biblioteca utilizada para falicitar o parser de Jsons em objetos.
 - <b>WilliamChart</b> : Biblioteca utilizada para geração de gráficos na aplicação.
 
-## Apis Utlizadas
+## Apis
 
 Foram utlizadas duas apis na aplicação para recuperar dados relativos a converção e exibição de moedas:
 
@@ -80,7 +80,7 @@ Foram utlizadas duas apis na aplicação para recuperar dados relativos a conver
 - <b>Rest Countries API</b> - Api utilizada para recuperar os simbolos das moedas disponíveis no app
   - https://restcountries.eu/
   
-## Testes Utilizados
+## Testes
 
 Além de testar o app por contra própria e testar com amigos, criei um Teste de Instrumentação automatizado simples, nomeado por MainScreenTest, para testar alguns fluxos do app:
 
