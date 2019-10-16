@@ -1,4 +1,4 @@
-package com.example.android_recruitment.adapters
+package com.example.android_recruitment.adapter
 
 import android.content.Context
 import android.content.Intent

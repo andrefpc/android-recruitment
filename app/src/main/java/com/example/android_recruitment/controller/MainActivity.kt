@@ -9,7 +9,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.android_recruitment.R
-import com.example.android_recruitment.adapters.RatesAdapter
+import com.example.android_recruitment.adapter.RatesAdapter
 import com.example.android_recruitment.model.generic.Rate
 import com.example.android_recruitment.model.generic.ResultVolley
 import com.example.android_recruitment.model.response.CountryInfoReponse

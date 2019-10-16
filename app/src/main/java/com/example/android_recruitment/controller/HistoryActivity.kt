@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.android_recruitment.R
-import com.example.android_recruitment.adapters.HistoryAdapter
+import com.example.android_recruitment.adapter.HistoryAdapter
 import com.example.android_recruitment.model.generic.History
 import com.example.android_recruitment.model.generic.ResultVolley
 import com.example.android_recruitment.model.response.CountryInfoReponse

@@ -3,7 +3,7 @@ package com.example.android_recruitment.controller
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android_recruitment.R
-import com.example.android_recruitment.adapters.CurrencyAdapter
+import com.example.android_recruitment.adapter.CurrencyAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
