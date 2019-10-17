@@ -46,7 +46,7 @@ Foi utilizada a arquitetura MVC no projeto, entretanto, a estrutura de pastas ut
 
 A estrutura de pacotes ficou a seguinte:
 
-- <b>adpter</b> : Onde estão todos os adapters da aplicação (listagens por exemplo).
+- <b>adapter</b> : Onde estão todos os adapters da aplicação (listagens por exemplo).
 - <b>controller</b> : Onde estão as Activities e ViewControllers do projeto.
 - <b>model</b> : Onde estão os objetos de modelo do projeto.
 - <b>service</b> : Onde estão as classes responsáveis pelos requests que o app realiza.
